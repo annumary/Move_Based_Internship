@@ -1,0 +1,16 @@
+[package]
+name = "MoveSampleProject"
+version = "1.0.0"
+authors = []
+
+[addresses]
+Sender = "0x41a7e144fc785123064cbd77e2ad2ddc2d3fd10c8fd4e18f546307c0d0b7442a"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
