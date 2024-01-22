@@ -1,4 +1,15 @@
+module 0x1::Signer {
+    // Borrows the address of the signer
+    native public fun borrow_address(s: &signer): &address;
+
+    // Copies the address of the signer
+    public fun address_of(s: &signer): address {
+        *borrow_address(s)
+    }
+}
+
 module 0x1::Dapp {
+    use 0x1::Signer;
 
     // Constants
     const MAX_UPVOTES: u64 = 10;
